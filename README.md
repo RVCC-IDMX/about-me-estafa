@@ -1,4 +1,4 @@
 # About me 
-Empty template for About Me Project
+About Me Project
 
 Anthony Solis
