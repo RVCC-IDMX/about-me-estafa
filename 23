@@ -1,0 +1,11 @@
+body{
+    font-family: "Yeseva One", serif; 
+    font-weight: 700; 
+    color: #39615C;
+    background-color: #E0B39F;
+}
+p {
+    font-family: "Inter Tight", sans-serif;
+    font-weight: 600;
+    color: #3D2014;
+}
