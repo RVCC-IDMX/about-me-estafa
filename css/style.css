@@ -19,23 +19,24 @@ header {
     letter-spacing: 2px;
 }
 
-header img {
-    position: flex;
-}
-
 p {
     font-family: "Inter Tight", sans-serif;
     font-weight: 600;
-    color: #FFFFFD;
+    color: #E0B39F;
     font-size: 15pt;
 }
-#hero {
+#hero, footer{
     text-align: center; 
+    color: #E0B39F 
 }
 
 #hero img {
     width: 300px;
     border-radius: 50%;
     background-color: #65c9ff;
-    border: 5px solid;
+    border: 5px solid #87A19E;
 }
+#bio {
+    text-align: center; 
+}
+
