@@ -67,8 +67,8 @@ ul {
     text-align: center;
 }
 
-
 #hobbies h2 {
+    text-align: center;
     font-size: 50pt;
     background: #3d2014e0;
     border: #7b6f5b21;
@@ -79,16 +79,39 @@ ul {
     height: 84px;
     width: 350px;
     box-shadow: 0px 6px 9px 2px rgb(10 43 38 / 40%);
-    text-shadow: -1px 3px 2px #18110da1, 2px 7px 11px rgba(0, 0, 0, 0.15), -2px -9px 10px rgba(0, 0, 0, 0.1), 1px 13px 8px rgba(0, 0, 0, 0.1);
+    text-shadow: -1px 3px 2px #18110da1, 
+                    2px 7px 11px rgba(0, 0, 0, 0.15), 
+                    -2px -9px 10px rgba(0, 0, 0, 0.1), 
+                    1px 13px 8px rgba(0, 0, 0, 0.1);
 }
 
 #hobbies ul {
-    width: 100px;
-    display: table;
-    margin: 30px auto 30px 455px;
-    padding: 10px 10px;
+    display: inline-block; 
+    text-align: left;
+    list-style: none;
+}
+#hobbies li {
+    padding: 11px;
+    background-color:#3d2014e0; 
+    border: #7b6f5b21;
+    border-style: outset;
+    border-radius: 15px;
+    margin: 5px;
+    box-shadow: inset 0px 7px 7px 1px rgb(10 43 38 / 40%);
+    text-shadow: 0px 4px 4px #02020275;
 }
 
-#hobbies li {
-    margin: 0px;
+#hobbies li::before {
+    display: inline-block;
+    text-align: left; 
+    content: "->";
+    font-size: 1em;
+    font-weight: bolder;
+    padding-right: 12px;
 }
+
+
+
+
+
+
