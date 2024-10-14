@@ -46,6 +46,7 @@ ul {
     font-size: 16pt;
 }
 
+/* Hero Section */
 
 #hero, footer{
     text-align: center; 
@@ -59,12 +60,25 @@ ul {
     border-radius: 50%;
     background-color: #65c9ff;
 }
+
+/* Bio Section */
+
 #bio {
     text-align: center; 
 }
 
+/* Hobbies Section */
+
 #hobbies {
     text-align: center;
+    border: 30px #5937269c;
+    width: 557px;
+    margin: 30px auto 30px auto;
+    background-color: #506f6b;
+    border-radius: 10px;
+    border-style: ridge;
+    box-shadow:-1px 5px 15px 3px #0406064f,
+                inset 0px -1px 20px 3px #52dbd84d
 }
 
 #hobbies h2 {
@@ -104,14 +118,75 @@ ul {
 #hobbies li::before {
     display: inline-block;
     text-align: left; 
-    content: "->";
+    content: ">";
     font-size: 1em;
     font-weight: bolder;
     padding-right: 12px;
 }
 
+/* Gallery Section */
+#gallery {
+    text-align: center;
+    border: 30px #5937269c;
+    margin: 30px auto 30px auto;
+    background-color: #506f6b;
+    border-radius: 10px;
+    border-style: ridge;
+    box-shadow:-1px 5px 15px 3px #0406064f,
+                inset 0px -1px 20px 3px #52dbd84d
+}
 
+#gallery h2 {
+    text-align: center;
+    font-size: 50pt;
+    background: #3d2014e0;
+    border: #7b6f5b21;
+    border-style: outset;
+    border-radius: 15px;
+    padding: 10px 10px;
+    margin: 50px auto 10px auto;
+    height: 84px;
+    width: 500px;
+    box-shadow: 0px 6px 9px 2px rgb(10 43 38 / 40%);
+    text-shadow: -1px 3px 2px #18110da1, 
+                    2px 7px 11px rgba(0, 0, 0, 0.15), 
+                    -2px -9px 10px rgba(0, 0, 0, 0.1), 
+                    1px 13px 8px rgba(0, 0, 0, 0.1);
+}
 
+#gallery img {
+    max-width: 100%;
+}
 
+#gallery figure {
+    text-align: center;
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: 15pt;
+    padding: 11px;
+    border: #7b6f5b21;
+    border-style: outset;
+    border-radius: 15px;
+    box-shadow: inset 0px 7px 7px 1px rgb(10 43 38 / 40%);
+}
 
+#gallery figcaption {
+    background-color: #3b261d;
+    margin: 10px auto 10px auto;
+    padding: 10px;
+    line-height: 20px;
+    width: fit-content;
+    border-color: #7b6f5b21;
+    border-radius: 5px;
+    border-style: outset;
+    box-shadow: 0px 7px 15px 1px #28333196;
+    text-shadow: 1px 0px 18px #1614147a;
+}
 
+#gallery hr {
+    width: 1750px;
+    height: 0px;
+    border: none;
+    border-top: medium double #b5dbcb8c;
+    border-width: 13px 0 0 0;
+}
