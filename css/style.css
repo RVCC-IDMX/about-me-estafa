@@ -1,6 +1,7 @@
 body {
     color: #E0B39F;
     background-color: #39615C;
+    text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -13,7 +14,6 @@ h1, h2, h3, h4, h5, h6 {
     border: 4px #092b2621;
     border-style: inset;
     background-color: #472a1ff7;
-    height: fit-content;
     width: fit-content;
     margin: 1px auto 71px auto;
     padding: 10px 30px 10px 30px;
@@ -24,6 +24,8 @@ h1, h2, h3, h4, h5, h6 {
                     0px 14px 10px rgba(0,0,0,0.15),
                     0px 24px 2px rgba(0,0,0,0.1),
                     0px 34px 30px rgba(0,0,0,0.1);
+
+    white-space: nowrap;
 }
 
 header {
@@ -70,9 +72,12 @@ ul {
 /* Hobbies Section */
 
 #hobbies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     border: 30px #5937269c;
-    width: 557px;
+    width: 850px;
     margin: 30px auto 30px auto;
     background-color: #506f6b;
     border-radius: 10px;
@@ -100,17 +105,20 @@ ul {
 }
 
 #hobbies ul {
-    display: inline-block; 
+    display: inline-block;
     text-align: left;
     list-style: none;
+    padding-left: 6px;
+    margin-top: 10px;
 }
+
 #hobbies li {
     padding: 11px;
     background-color:#3d2014e0; 
     border: #7b6f5b21;
     border-style: outset;
     border-radius: 15px;
-    margin: 5px;
+    margin-bottom: 13px;
     box-shadow: inset 0px 7px 7px 1px rgb(10 43 38 / 40%);
     text-shadow: 0px 4px 4px #02020275;
 }
@@ -125,8 +133,12 @@ ul {
 }
 
 /* Gallery Section */
+
 #gallery {
+    display: flex;
+    flex-direction: column;
     text-align: center;
+    width: 850px;
     border: 30px #5937269c;
     margin: 30px auto 30px auto;
     background-color: #506f6b;
@@ -229,3 +241,26 @@ ul {
     color: #f7ebe5;
     line-height: 30px;
 }
+
+@media screen and (min-width: 60em) {
+    figure {
+        display: grid; 
+        grid-template-columns: 2fr 1fr;
+    }
+
+    figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+
+    #hobbies {
+        width: 850px;
+    }
+}
+
+
+
+
