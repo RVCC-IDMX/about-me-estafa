@@ -138,7 +138,7 @@ ul {
     display: flex;
     flex-direction: column;
     text-align: center;
-    width: 850px;
+    width: 80%;
     border: 30px #5937269c;
     margin: 30px auto 30px auto;
     background-color: #506f6b;
@@ -149,7 +149,6 @@ ul {
 }
 
 #gallery h2 {
-    text-align: center;
     font-size: 50pt;
     background: #3d2014e0;
     border: #7b6f5b21;
@@ -186,7 +185,7 @@ ul {
     background-color: #3b261d;
     margin: 10px auto 10px auto;
     padding: 10px;
-    line-height: 20px;
+    line-height: 22px;
     width: fit-content;
     border-color: #7b6f5b21;
     border-radius: 5px;
@@ -239,7 +238,7 @@ ul {
 
 #lit div p {
     color: #f7ebe5;
-    line-height: 30px;
+    line-height: 40px;
 }
 
 @media screen and (min-width: 60em) {
@@ -252,15 +251,89 @@ ul {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 2rem;
-        margin-left: 1rem;
+        align-self: center;
     }
 
     #hobbies {
         width: 850px;
     }
+
+    #lit div {
+        max-width: 100%;
+        columns: 40rem;
+    }
+
+    #gallery img {
+        width: 70%;
+        justify-self: center;
+    }
+
+    #gallery figcaption {
+        margin-right: 43px;
+        margin-left: -40px;
+
+    }
+    
 }
 
+@media screen and (min-width: 48em) {
+    figure {
+        display: grid; 
+        grid-template-columns: 2fr 1fr;
+    }
 
+    figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
 
+    #hobbies {
+        width: 850px;
+    }
+
+    #lit div {
+        max-width: 100%;
+        columns: 40rem;
+    }
+
+    #gallery img {
+        width: 70%;
+        justify-self: center;
+    }
+
+    #gallery figcaption {
+        margin-right: 43px;
+        margin-left: -40px;
+
+    }
+    
+}
+@media screen and (min-width: 100em) {
+    #gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    } 
+
+    hr {
+        display: none;
+    }
+
+    #gallery h2 {
+        grid-column: 1/-1;
+    }
+    
+    figure {
+        display: block;
+    }
+
+    #gallery img {
+        width: 100%
+    }
+
+    #gallery figcaption {
+        margin: 10px auto 10px auto;
+    }
+}
 
