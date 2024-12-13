@@ -10,6 +10,24 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 80pt;
 }
 
+h2 {
+    text-align: center;
+    font-size: 50pt;
+    background: #3d2014e0;
+    border: #7b6f5b21;
+    border-style: outset;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    margin: 50px auto 10px auto;
+    height: fit-content;
+    width: fit-content;
+    box-shadow: 0px 6px 9px 2px rgb(10 43 38 / 40%);
+    text-shadow: -1px 3px 2px #18110da1, 
+                    2px 7px 11px rgba(0, 0, 0, 0.15), 
+                    -2px -9px 10px rgba(0, 0, 0, 0.1), 
+                    1px 13px 8px rgba(0, 0, 0, 0.1);
+}
+
 .title {
     border: 4px #092b2621;
     border-style: inset;
@@ -77,31 +95,12 @@ ul {
     align-items: center;
     text-align: center;
     border: 30px #5937269c;
-    width: 850px;
     margin: 30px auto 30px auto;
     background-color: #506f6b;
     border-radius: 10px;
     border-style: ridge;
     box-shadow:-1px 5px 15px 3px #0406064f,
                 inset 0px -1px 20px 3px #52dbd84d
-}
-
-#hobbies h2 {
-    text-align: center;
-    font-size: 50pt;
-    background: #3d2014e0;
-    border: #7b6f5b21;
-    border-style: outset;
-    border-radius: 15px;
-    padding: 10px 20px 10px 20px;
-    margin: 50px auto 10px auto;
-    height: fit-content;
-    width: fit-content;
-    box-shadow: 0px 6px 9px 2px rgb(10 43 38 / 40%);
-    text-shadow: -1px 3px 2px #18110da1, 
-                    2px 7px 11px rgba(0, 0, 0, 0.15), 
-                    -2px -9px 10px rgba(0, 0, 0, 0.1), 
-                    1px 13px 8px rgba(0, 0, 0, 0.1);
 }
 
 #hobbies ul {
@@ -148,22 +147,6 @@ ul {
                 inset 0px -1px 20px 3px #52dbd84d
 }
 
-#gallery h2 {
-    font-size: 50pt;
-    background: #3d2014e0;
-    border: #7b6f5b21;
-    border-style: outset;
-    border-radius: 15px;
-    padding: 10px 20px 10px 20px;
-    margin: 50px auto 10px auto;
-    height: fit-content;
-    width: fit-content;
-    box-shadow: 0px 6px 9px 2px rgb(10 43 38 / 40%);
-    text-shadow: -1px 3px 2px #18110da1, 
-                    2px 7px 11px rgba(0, 0, 0, 0.15), 
-                    -2px -9px 10px rgba(0, 0, 0, 0.1), 
-                    1px 13px 8px rgba(0, 0, 0, 0.1);
-}
 
 #gallery img {
     max-width: 100%;
@@ -204,24 +187,6 @@ ul {
 
 /* Literature Section */
 
-#lit h2 {
-    text-align: center;
-    font-size: 50pt;
-    background: #3d2014e0;
-    border: #7b6f5b21;
-    border-style: outset;
-    border-radius: 15px;
-    padding: 10px 20px 10px 20px;
-    margin: 50px auto 10px auto;
-    height: fit-content;
-    width: fit-content;
-    box-shadow: 0px 6px 9px 2px rgb(10 43 38 / 40%);
-    text-shadow: -1px 3px 2px #18110da1, 
-                    2px 7px 11px rgba(0, 0, 0, 0.15), 
-                    -2px -9px 10px rgba(0, 0, 0, 0.1), 
-                    1px 13px 8px rgba(0, 0, 0, 0.1);
-}
-
 #lit div {
     font-style: italic;
     max-width: 40rem;
@@ -239,6 +204,72 @@ ul {
 #lit div p {
     color: #f7ebe5;
     line-height: 40px;
+}
+
+#video {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 20px;
+    max-width: 90rem;
+    min-width: 100px;
+    border: ridge 30px #5937269C;
+    border-radius: 10px;
+    box-shadow: -1px 5px 15px 3px #0406064f,
+                inset 0px -1px 20px 3px #52dbd84d;
+}
+
+#video div {
+    padding: 20px;
+    border: #7B6F5B21;
+    align-self: center;
+    width: fit-content;
+    border-style: outset;
+    border-radius: 15px;
+    box-shadow: inset 0px 7px 7px 1px rgb(10 43 38 / 40%);
+}
+
+#myVideo {
+    border-radius: 10px;
+    border: 17px outset #d3d7d75c;
+    width: 1160px;
+    height: 595px;
+}
+
+
+@media screen and (min-width: 48em) {
+    figure {
+        display: grid; 
+        grid-template-columns: 2fr 1fr;
+    }
+
+    figcaption {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    #hobbies {
+        width: 850px;
+    }
+
+    #lit div {
+        max-width: 100%;
+        columns: 40rem;
+    }
+
+    #gallery img {
+        width: 70%;
+        justify-self: center;
+    }
+
+    #gallery figcaption {
+        margin-right: 43px;
+        margin-left: -40px;
+
+    }
 }
 
 @media screen and (min-width: 60em) {
@@ -273,43 +304,30 @@ ul {
         margin-left: -40px;
 
     }
+
+    #myVideo {
+        width: 800px;
+        height: 438px;
+    }
+
     
 }
 
-@media screen and (min-width: 48em) {
-    figure {
-        display: grid; 
-        grid-template-columns: 2fr 1fr;
+@media screen and (max-width: 60em) {
+    #myVideo {
+        width: 570px;
+        height: 326px;
     }
-
-    figcaption {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-    }
-
-    #hobbies {
-        width: 850px;
-    }
-
-    #lit div {
-        max-width: 100%;
-        columns: 40rem;
-    }
-
-    #gallery img {
-        width: 70%;
-        justify-self: center;
-    }
-
-    #gallery figcaption {
-        margin-right: 43px;
-        margin-left: -40px;
-
-    }
-    
 }
+
+@media screen and (min-width: 68em) {
+    #myVideo {
+        width: 875px;
+        height: 438px;
+    }
+}
+
+
 @media screen and (min-width: 100em) {
     #gallery {
         display: grid;
@@ -335,5 +353,11 @@ ul {
     #gallery figcaption {
         margin: 10px auto 10px auto;
     }
+
+    #myVideo {
+        width: 1160px;
+        height: 595px;
+    }
 }
+
 
