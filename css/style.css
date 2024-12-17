@@ -1,4 +1,12 @@
+*, :after, :before {
+    box-sizing: border-box;
+    border: 0 solid #ffffff00;
+}
+
 body {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
     color: #E0B39F;
     background-color: #39615C;
     text-align: center;
@@ -15,6 +23,7 @@ h2 {
     font-size: 50pt;
     background: #3d2014e0;
     border: #7b6f5b21;
+    border-bottom: 5px #d7bcb1 solid;
     border-style: outset;
     border-radius: 15px;
     padding: 10px 20px 10px 20px;
@@ -44,6 +53,7 @@ h2 {
                     0px 34px 30px rgba(0,0,0,0.1);
 
     white-space: nowrap;
+    cursor: default;
 }
 
 header {
@@ -79,6 +89,7 @@ ul {
     width: 300px;
     border-radius: 50%;
     background-color: #65c9ff;
+    box-shadow: 0px 0px 13px 9px #323f3d70;
 }
 
 /* Bio Section */
@@ -135,9 +146,9 @@ ul {
 
 #gallery {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     text-align: center;
-    width: 80%;
+    width: 100%;
     border: 30px #5937269c;
     margin: 30px auto 30px auto;
     background-color: #506f6b;
@@ -153,7 +164,11 @@ ul {
 }
 
 #gallery figure {
+    display: flex;
+    min-height: 610px;
     text-align: center;
+    justify-content: center;
+    align-items: center;
     font-family: "Arimo", sans-serif;
     font-weight: bold;
     font-size: 15pt;
@@ -162,9 +177,11 @@ ul {
     border-style: outset;
     border-radius: 15px;
     box-shadow: inset 0px 7px 7px 1px rgb(10 43 38 / 40%);
+    flex-direction: column-reverse;
 }
 
-#gallery figcaption {
+.back {
+    align-self: bottom;
     background-color: #3b261d;
     margin: 10px auto 10px auto;
     padding: 10px;
@@ -177,41 +194,60 @@ ul {
     text-shadow: 1px 0px 18px #1614147a;
 }
 
-#gallery hr {
-    width: 70%;
-    height: 0px;
-    border: none;
-    border-top: medium double #b5dbcb8c;
-    border-width: 13px 0 0 0;
-}
-
 /* Literature Section */
+#lit {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto 10em auto;
+    max-width: 1330px;
+}
 
-#lit div {
-    font-style: italic;
-    max-width: 40rem;
-    background-color: #3b261d;
-    margin: 10px auto 10px auto;
-    padding: 10px 20px 10px 20px;
-    width: fit-content;
-    border-color: #7b6f5b21;
-    border-radius: 5px;
-    border-style: outset;
-    box-shadow: 0px 7px 15px 1px #28333196;
+#lit .chunky {
+    display: flex;
+    background-color: #506F6B;
+    margin-top: 35px;
+    padding: 10px 5px 10px 5px;
+    min-width: 1020px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border: 30px #5937269c;
+    border-radius: 10px;
+    border-style: ridge;
+    box-shadow: -1px 5px 15px 3px #0406064f,
+                inset 0px -1px 20px 3px #52dbd84d;
     text-shadow: 1px 0px 18px #1614147a;
+    justify-content: space-evenly;
+    align-items: flex-start;
 }
 
-#lit div p {
-    color: #f7ebe5;
-    line-height: 40px;
+#lit .chunky p {
+    color: #fdf1ec;
+    align-content: center;
+    background-color: #534138;
+    line-height: 27px;
+    font-size: 15pt;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 30px 15px 15px 15px;
+    height: 330px;
+    border: outset #7b6f5b21;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: inset 0px 7px 7px 1px rgb(43 19 10 / 40%);
+}
+.chunk3 {
+    display: none;
 }
 
+
+/* Video Section */
 #video {
     display: flex;
     flex-direction: column;
     margin-right: auto;
     margin-left: auto;
     padding-bottom: 20px;
+    background-color: #506f6b;
     max-width: 90rem;
     min-width: 100px;
     border: ridge 30px #5937269C;
@@ -237,121 +273,404 @@ ul {
     height: 595px;
 }
 
+/* Form Section */
+#contact {
+    display: flex;
+    flex-direction: column;
+    max-width: 1330px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+#contactForm {
+    display: flex;
+    font-family: "Yeseva One", serif;
+    max-width: 1330px;
+    min-width: 500px;
+    width: 70%;
+    background-color: #506F6B;
+    box-shadow: -1px 5px 15px 3px #0406064f,
+                inset 0px -1px 20px 3px #52dbd84d;
+    border: ridge 30px #5937269C;
+    border-radius: 10px;
+    padding: 22px;
+    margin-top: 35px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactForm .leg1 {
+    font-size: 40px;
+    text-shadow: 0px 0px 5px #00000042;
+    border: 1px outset #7A594536;
+    background: #573a2c;
+    padding-left: 14px;
+    padding-right: 14px;
+    margin-bottom: 15px;
+    color: #EFD0C2;
+    border-radius: 30px;
+}
+
+#contactForm .leg2 {
+    background-color: #573a2c;
+    text-shadow: 0px 0px 5px #00000042;
+    width: 340px;
+    border: 1px outset #7A594536;
+    align-self: start;
+    border-radius: 10px;
+    color: #EFD0C2;
+    text-align: center;
+    padding: 4px 10px 4px 10px;
+    letter-spacing: 0.2px;
+    font-size: 22px;
+}
+
+.name::after, .email::after, .phone::after {
+    content: "*";
+    color: #D72828;
+    margin-left: 2px;
+}
+
+.name, .email, .phone, .phonetype, .message {
+    font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.name {
+    background-color: #573a2c;
+    text-shadow: 0px 0px 5px #00000042;
+    width: 90px;
+    border: 1px outset #7A594536;
+    align-self: start;
+    border-radius: 10px;
+    color: #EFD0C2;
+    text-align: start;
+    padding-left: 10px;
+    padding-right: 7px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 0.2px;
+}
+
+.email {
+    background-color: #573a2c;
+    text-shadow: 0px 0px 5px #00000042;
+    width: 90px;
+    border: 1px outset #7A594536;
+    align-self: start;
+    border-radius: 10px;
+    color: #EFD0C2;
+    text-align-last: start;
+    padding-left: 10px;
+    padding-right: 7px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    letter-spacing: 0.2px;
+}
+
+.phone {
+    background-color: #573a2c;
+    text-shadow: 0px 0px 5px #00000042;
+    width: 90px;
+    border: 1px outset #7A594536;
+    align-self: start;
+    border-radius: 10px;
+    color: #EFD0C2;
+    text-align-last: start;
+    padding-left: 10px;
+    padding-right: 7px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    letter-spacing: 0.2px;
+}
+
+.phonetype {
+    background-color: #573a2c;
+    text-shadow: 0px 0px 5px #00000042;
+    width: fit-content;
+    border: 1px outset #7A594536;
+    align-self: start;
+    border-radius: 10px;
+    text-align-last: start;
+    color: #EFD0C2;
+    padding-left: 10px;
+    padding-right: 7px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    letter-spacing: 0.2px;
+}
+
+.message {
+    background-color: #573a2c;
+    text-shadow: 0px 0px 5px #00000042;
+    width: fit-content;
+    border: 1px outset #7A594536;
+    align-self: start;
+    border-radius: 10px;
+    color: #EFD0C2;
+    text-align-last: start;
+    padding-left: 10px;
+    padding-right: 7px;
+    margin-left: 0px;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    letter-spacing: 0.2px;
+}
+
+#formElements {
+    display: flex;
+    border: 2px outset #7B6F5B21;
+    padding: 15px 40px 25px 40px;
+    flex-direction: column;
+    border-radius: 15px;
+    box-shadow: inset 0px 7px 7px 1px rgb(10 43 38 / 40%);
+    min-width: 310px;
+}
+
+#formElements label .name {
+    background-color: pink;
+}
+
+#formElements input, select {
+    font-family: "Yeseva One", serif;
+    font-weight: 500;
+    resize: none;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #F2ECE9;
+    border: 1px solid #435B58C4;
+    color: #351406;
+    font-size: 17px;
+    text-shadow: 0px 0px 7px #00000024;
+}
+
+#formElements input:focus-visible {
+    outline: 2px solid #9AB7B5;
+}
+
+fieldset { 
+    border: none;
+}
+
+button {
+    width: 200px;
+    align-self: center;
+    background-color: #573a2c;
+    border: 2px outset #4745452b;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    margin-top: 22px;
+    box-shadow: 0px 0px 16px 9px #1e202026;
+    font-size: 33px;
+    color: #efd0c2;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 3px #00000038;
+    font-family: "Yeseva One", serif;
+}
+
+.list {
+    background: #f2ece9;
+    width: 390px;
+    height: fit-content;
+    margin-top: 40px;
+    align-self: center;
+    border-radius: 30px;
+    border: 3px outset #88aaa640;
+    box-shadow: inset 0px 7px 7px 1px rgb(48 43 40 / 30%);
+}
+
+.list ul {
+    justify-self: center;
+    font-family: "Yeseva One", serif;
+    font-weight: 500;
+    text-shadow: 0px 0px 1px #00000036;
+    margin-top: 15px;
+    margin-left: -30px;
+    color: #6C3927;
+}
+li {
+    list-style: none;
+    text-align: start;
+    padding-bottom: 10px;
+}
+
+textarea {
+    font-family: "Yeseva One", serif;
+    font-weight: 500;
+    resize: none;
+    border-radius: 10px;
+    padding: 7px;
+    background-color: #F2ECE9;
+    border: 1px solid #435B58C4;
+    color: #351406;
+    font-size: 17px;
+    text-shadow: 0px 0px 7px #00000024;
+}
+
+textarea:focus-visible {
+    resize: none;
+    outline: 2px solid #9AB7B5;
+}
+
+#message-yes, #message-no {
+    cursor: pointer;
+}
 
 @media screen and (min-width: 48em) {
-    figure {
-        display: grid; 
-        grid-template-columns: 2fr 1fr;
+    #gallery {
+        flex-direction: column;
     }
-
-    figcaption {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-    }
-
-    #hobbies {
-        width: 850px;
-    }
-
-    #lit div {
-        max-width: 100%;
-        columns: 40rem;
+    #gallery figure {
+      min-height: 490px;  
     }
 
     #gallery img {
         width: 70%;
         justify-self: center;
     }
-
-    #gallery figcaption {
-        margin-right: 43px;
-        margin-left: -40px;
-
+    #lit .chunky {
+        min-width: 23em;
+    }
+    #lit .chunky p {
+        font-size: 11pt;
     }
 }
 
 @media screen and (min-width: 60em) {
-    figure {
-        display: grid; 
-        grid-template-columns: 2fr 1fr;
-    }
-
-    figcaption {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-    }
-
+    #gallery {
+        flex-direction: row;
+    } 
     #hobbies {
         width: 850px;
     }
-
-    #lit div {
-        max-width: 100%;
-        columns: 40rem;
-    }
-
     #gallery img {
-        width: 70%;
-        justify-self: center;
+        width: 100%;
     }
-
-    #gallery figcaption {
-        margin-right: 43px;
-        margin-left: -40px;
-
-    }
-
     #myVideo {
         width: 800px;
         height: 438px;
     }
-
-    
+    #lit .chunky {
+        min-width: 48em;
+    }
+    #lit .chunky p {
+        font-size: 12pt;
+    }
 }
 
 @media screen and (max-width: 60em) {
+    .title {
+        font-size: 45pt;
+        text-shadow: none;
+    }
     #myVideo {
-        width: 570px;
-        height: 326px;
+        width: 211px;
+        height: 200px;
+    }
+    #lit .chunky {
+        min-width: 23em;
+    }
+    #lit .chunky p {
+        font-size: 11pt;
+        height: fit-content;
+    }
+    .chunk1, .chunk2 {
+        display:none;
+    }
+    .chunk3 {
+        display: flex;
+    }
+    #gallery {
+       flex-direction: column; 
+    }
+    #gallery figure {
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        flex-direction: column; 
+        justify-content: space-evenly;
+    }
+    #gallery img {
+        border-radius: 20px;
+    }
+    h2 {
+        font-size: 40pt;
+    }
+    #formElements {
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        width: 100px;
+    }
+    #contactForm {
+        min-width: 420px;
+    }
+    .list {
+        width: fit-content;
+    }
+    #contactForm .leg2 {
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .title {
+        font-size: 40pt;
+    }
+    #formElements {
+        width: 100px;
+    }
+    #contactForm {
+        min-width: 375px;
+    }
+    .list {
+        width: fit-content;
+    }
+    #contactForm .leg2 {
+        width: fit-content;
     }
 }
 
 @media screen and (min-width: 68em) {
+    #lit .chunky p {
+        font-size: 15pt;
+    }
     #myVideo {
         width: 875px;
         height: 438px;
     }
 }
 
+@media screen and (min-width: 1300px) {
+    #lit .chunky {
+    }
+    #lit .chunky p {
+        font-size: 15pt;
+    }
+    
+}
 
 @media screen and (min-width: 100em) {
     #gallery {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        flex-direction: row;
     } 
-
-    hr {
-        display: none;
-    }
 
     #gallery h2 {
         grid-column: 1/-1;
     }
     
-    figure {
-        display: block;
+    #gallery figure {
+        min-height: 610px;  
     }
 
     #gallery img {
         width: 100%
-    }
-
-    #gallery figcaption {
-        margin: 10px auto 10px auto;
     }
 
     #myVideo {
