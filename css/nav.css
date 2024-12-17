@@ -65,10 +65,14 @@ main {
     letter-spacing: 2px;
     text-decoration: none;
     display: inline-block;
+    border-radius: 20px;
 }
 
-
-
+.navbar-links a:hover,
+.navbar-link a:focus {
+    filter: invert(1);
+    outline: none;
+}
 /* 
 media query for non-mobile nav bar
 min-width set to width of nav elements 
