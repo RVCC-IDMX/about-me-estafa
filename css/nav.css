@@ -36,6 +36,7 @@ main {
 
 .logo img {
     position: absolute;
+    transform: translateX(-111px);
 }
 
 /* navigation list */
@@ -102,5 +103,8 @@ such that no text wraps
         font-size: 12.5pt;
         text-align: center;
         padding: 0.1rem 0.4rem;
+    }
+    .logo img {
+        display: none;
     }
 }
